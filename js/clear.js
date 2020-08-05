@@ -1,0 +1,3 @@
+function clearSer(){
+   sessionStorage.clear();
+}

@@ -1,0 +1,31 @@
+var ctrlImg = 2;         // 数字 随意  填充 用
+
+var pageNums = 2;         // 要填写 文件夹内 .html总数 -->    news/下  1.html - xx.html 数量 ( 其他名 不算入)   
+
+var totalpage = 24;       // page amount   显示 分页 总数. 不管有没有内容 都显示24页。
+
+var pageLen = 5;          // 分页列表  每页显示数量, 每页显示 5 条  
+
+
+//
+showNums = 3;       // 每1页 要显示的图片 数量     news_all列表一览 的参数
+
+
+detTxt.js -->   count1-countxx   =  1.html - xx.html   的标题
+
+/*
+图片预加载参数
+参数	    描述	                                                       默认值
+
+offset	    离可视区域多少像素的图片可以被加载	                                0                   
+throttle	图片延迟多少毫秒加载	                                        250
+
+debounce	防抖动	                                                        true
+
+unload	    告诉echo是加载还是卸载视图中的图片，当图片离开视图区域时触发	false
+
+callback	回调函数，用来检测图片是否加载	function()
+*/	
+
+
+new文件夹 = 预览图 
