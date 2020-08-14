@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <meta content="telephone=no" name="format-detection" /> 
+  <meta content="email=no" name="format-detection" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" /> 
+  <title>Products lists</title> 
+  <meta name="description" content="product list page,รายการสินค้า, Danh sách sản phẩm" /> 
+  <meta name="keywords" content="product list page" /> 
+  <meta property="og:url" content="https://intstore.github.io/store/">
+  <meta property="og:title" content="intStore">
+  <meta property="og:description" content="product list page,รายการสินค้า, Danh sách sản phẩm">  
+  <link rel="stylesheet" href="css/style.css" /> 
+  <script src="js/PageAmount.js"></script> 
+  <script src="js/detTxt.js"></script> 
+ <style>
+.current{ background:#c1b0b07a; } 
+.list0,.list1,.current{padding:0 20px;}
+.list1{color:#cacaca;}
+.ctrl{clear:both;}
+
+.serArea img{margin-left:5px; padding:0; width:28px;}
+.off{display:none;}
+  </style>
+ </head> 
+ <body> 
+ 
+<a name="top0"></a>
+<div class="isOn">
+  <div class="serArea">
+   <input id="searchTxt" class="" type="text" placeholder="" value="" style="min-height:30px; font-size:18px; margin-left:5px;padding-left:10px;" oninput="fnDelay('ct0')"/>
+   <a href="javascript:;" onclick="serCon('ct1')"><img src="imgs/search.ico" alt="search"/></a>
+   
+   <ul id="data_list"></ul> 
+   
+  </div>
+  <div>
+   <ul id="newsAll">
+	</ul>
+  </div> 
+  <div class="ctrl">
+	  <a class="btn_2" id="back" href="javascript:history.go(-1)"></a>
+	  <a class="btn_2" id="prev" onclick="prevPage();"> </a>
+	  <a class="btn_2" id="next" onclick="nextPage();"></a>
+	  <div class="clear"></div>
+  </div>
+    <a name="end0"></a>
+	<div class="header_info" id="uTop" style="display:none">
+		<a href="#top0"><img src="imgs/down2.png" alt="anchor up"></a>
+	</div>  
+	<div class="header_info" id="dTop" style="display:block;">
+		<a href="#end0"><img src="imgs/down.png" alt="anchor down"></a>
+	</div>   
+</div>
+<!-- end -->
+
+ <!-- -->
+  <div class="header"> 
+   <div class="nav">
+  
+	  <div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="index.html"></a></div>
+      <div class="nav_icon" onclick="menuBar()"><img src="imgs/nav-icon.png" alt="index.html"></div>
+      <div class="side_close" id="isMenu1" style="display: none;"></div>
+
+    <ul id="isMenu2" class="off">
+	    <li>
+          <div class="title">
+            <a href="index.html" target="_self">Home<em>首頁</em></a>
+          </div>
+        </li>
+		 <li>
+          <div class="title">
+            <a href="index.html#end0" target="_self">Message<em>聯繫方式</em></a>
+          </div>
+         </li>
+		 
+		 <li class="sCat"><a href="#">Category</a>
+		 <ul class="tdiv"></ul>
+	     <ul class="menu2 type02">
+			<a href="#" onclick="showCat(this.innerText)">Machinery</a>
+			<a href="#" onclick="showCat(this.innerText)">motor</a>
+			<a href="#" onclick="showCat(this.innerText)">Electric </a>  
+		 </ul>
+		 </div>
+		</li>	
+     </ul>
+	<div class="nav_footer"> 
+	   <div class="follow">
+			<a href="#" onclick="window.open('https://twitter.com/home?status=' + encodeURIComponent(window.location),'_blank'); return false"> <span class="m_tw" title="Twitter"></span></a>
+			
+			<a href="#" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(window.location),'_blank'); return false"> <span class="m_fb" title="Facebook"></span></a>
+			
+			<!--<a href="#" target="_blank"><span class="m_ins" title="Ins"></span></a>-->
+      </div>
+
+      <div class="copy">
+      Copyright@ intStore<br/>
+      international trade
+      </div>
+    </div>
+ 
+</div> 
+
+<div class="isUnder">	  
+ <div class="pageInfo">
+    <div id="setpage"></div> <!-- Page info -->
+    <div id="btnArea"></div>
+	
+	<div class="jumpArea">
+	<span id="pageMount0"></span>
+	<input id="jump" type="text" placeholder="" value="" style="min-height:30px; font-size:23px; width:100px; text-align:center;"/>
+	<span id="pageMount"></span>
+    <a href="javascript:;" onclick="jumpPage()">Go</a>
+    </div>
+  </div>
+<div class="isms">
+		Line:      
+  <br/>	Facebook:  
+  <br/> Mail:  
+</div>	
+</div>
+
+  <!-- -->
+  <script src="js/all.js"></script> 
+</body>
+
+</html>
