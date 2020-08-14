@@ -14,8 +14,8 @@ function uLan(){
 		lang = "vn";
 	}
 }
-if(sessionStorage.lang != undefined){
-	lang = sessionStorage.lang;
+if(localStorage.lang != undefined){
+	lang = localStorage.lang;
 }else{
 	uLan();
 }
@@ -58,8 +58,8 @@ aaa = "";
 curPage = 1;
 
 function clearSer(){
-   sessionStorage.clear();
-	sessionStorage.lang = lang;
+   localStorage.clear();
+	localStorage.lang = lang;
 }
 //clearSer();
 //
@@ -108,9 +108,9 @@ function sessExise(){
 	document.getElementById("searchTxt").placeholder = "empty search restore";
 	document.getElementById("searchTxt").className = "addLig";
 
-	serLists = sessionStorage.arr;  
+	serLists = localStorage.arr;  
 	arr = JSON.parse(serLists);        
-	amountPage = sessionStorage.getItem("setResu");
+	amountPage = localStorage.getItem("setResu");
 	for(var gStr=0; gStr < arr.length; gStr++){
 
 		arr0.push( text0["count"+arr[gStr]+lang] );
@@ -126,7 +126,7 @@ function defpage() {
 		arr0.push( text0["count"+i+lang] ); 	
 	}
 } 
-if(sessionStorage.arr != undefined){
+if(localStorage.arr != undefined){
 	sessExise();
 }else{
 	defpage();
@@ -485,8 +485,8 @@ function serCon(enDown){
 		   amountPage = serResuPages;
 //存臨時數據
 		   serLists = JSON.stringify(arr);    //對象轉字符串
-		   sessionStorage.arr = serLists;   //存入
-		   sessionStorage.setItem("setResu",amountPage);
+		   localStorage.arr = serLists;   //存入
+		   localStorage.setItem("setResu",amountPage);
 //
 	       showAll();  // 
 		}
@@ -498,12 +498,12 @@ function serCon(enDown){
 	 amountPage = Math.ceil(ctrlImg/showNums);
 	
 	 clearSer();
-	  //console.log(sessionStorage.lang+" cur Lang = "+lang);
+	  //console.log(localStorage.lang+" cur Lang = "+lang);
 	 showAll();
   }else if(inputVal == ""){
 	  document.getElementById("searchTxt").value = "";
 	  document.getElementById("data_list").style.display="none";
-	  if(sessionStorage.arr != undefined){
+	  if(localStorage.arr != undefined){
 		  document.getElementById("searchTxt").placeholder = "empty search restore";
 		  document.getElementById("searchTxt").className = "addLig";
 	  }else{

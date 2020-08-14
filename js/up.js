@@ -19,8 +19,8 @@ function uLan(){
 /*hidden other lang*/
 var lang = "en";
 var arrLang = ["en","th","vn"];
-if(sessionStorage.lang != undefined){
-	lang = sessionStorage.lang;
+if(localStorage.lang != undefined){
+	lang = localStorage.lang;
 }else{
 	uLan();
 }
@@ -118,8 +118,8 @@ function otherStyle(cur_sel){
 	}
   }
 }
-	if(sessionStorage.arr != undefined){  //news_all頁面 有執行搜索,并返回了 
-		var serLists = sessionStorage.arr;  // 讀取
+	if(localStorage.arr != undefined){  //news_all頁面 有執行搜索,并返回了 
+		var serLists = localStorage.arr;  // 讀取
 		arr = JSON.parse(serLists);       
 		pageNums = arr.length;
 		for(var i=0; i<arr.length;i++){

@@ -17,8 +17,6 @@ var text0={
 	count4th:" 【อิเล็กทรอนิกส์】 โซล่าชาร์จคอนโทรลเลอร์   ",
 	count4vn:" 【thiết bị điện tử】 Bộ điều khiển sạc năng lượng mặt trời ",
 	
-	
-	
 /* 	
    count2en:" valve1 ",
 	count2th:" value2 ",
