@@ -31,7 +31,9 @@
    <div class="header">
     <div class="nav">
       <div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="index.html"></a></div>
-      <div class="nav_icon" onclick="menuBar()"><img src="imgs/nav-icon.png" alt="index.html"></div>
+      <div class="nav_icon">
+		<img src="imgs/nav-icon.png" alt="index.html" onclick="menuBar()">
+		</div>
 		
       <div class="side_close" id="isMenu1" style="display: none;"></div>
       <ul id = "isMenu2" class="off">
@@ -233,11 +235,11 @@ Mail:    <br/>
 		   lang = "vn";
 		}
 	}
-	if(sessionStorage.lang == undefined){
+	if(localStorage.lang == undefined){
 		uLan();
-		sessionStorage.lang = lang;
+		localStorage.lang = lang;
 	}else{
-		lang = sessionStorage.lang;
+		lang = localStorage.lang;
 	}
 	
 	function cLang(cLan){
@@ -248,7 +250,7 @@ Mail:    <br/>
 		}else{
 			lang = "en";
 		}
-		sessionStorage.lang = lang;
+		localStorage.lang = lang;
 	}
   function otherStyle(cur_sel){
     if(amountNums > 0){

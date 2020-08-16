@@ -20,6 +20,16 @@ if(localStorage.lang != undefined){
 	uLan();
 }
 
+/*search text*/
+var catNums = document.getElementById("sKey").getElementsByTagName("a").length;
+function catLan(){
+	for(var i = 0; i < catNums; i++){
+		document.getElementById("sKey").getElementsByTagName("a")[i].innerText = text0["mKey"+(i+1)+lang];
+	}
+}
+catLan();
+/**/
+
 /*mobile menu*/
 var mStatus = "none";
  function menuBar(){

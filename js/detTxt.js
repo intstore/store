@@ -22,6 +22,19 @@ var text0={
 	count2th:" value2 ",
 	count2vn:" value3 ",
 */
+ 
+ /*search text */
+	mKey1en:" Machinery ",
+	mKey1th:"  เครื่องจักรกล ",
+	mKey1vn:" Máy móc ",
+	
+	mKey2en:" motor ",
+	mKey2th:"  มอเตอร์ ",
+	mKey2vn:" điện động cơ ",
+	
+	mKey3en:" electronics ",
+	mKey3th:"  อิเล็กทรอนิกส์ ",
+	mKey3vn:" thiết bị điện tử ",
 };
 	 
 

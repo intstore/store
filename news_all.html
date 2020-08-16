@@ -62,7 +62,9 @@
    <div class="nav">
   
 	  <div class="logo"><a href="index.html"><img src="imgs/logo.png" alt="index.html"></a></div>
-      <div class="nav_icon" onclick="menuBar()"><img src="imgs/nav-icon.png" alt="index.html" ></div>
+      <div class="nav_icon">
+		<img src="imgs/nav-icon.png" alt="index.html" onclick="menuBar()">
+		</div>
       <a href="#" class="side_close" id="isMenu1" style="display: none;"></a>
 
     <ul id="isMenu2" class="off">
@@ -79,10 +81,10 @@
 		 
 		 <li class="sCat"><a href="#">Category</a>
 		 <ul class="tdiv"></ul>
-	     <ul class="menu2 type02">
-			<a href="#" onclick="showCat(this.innerText)">Machinery</a>
-			<a href="#" onclick="showCat(this.innerText)">motor</a>
-			<a href="#" onclick="showCat(this.innerText)">Electric </a>  
+	     <ul class="menu2 type02" id="sKey">
+			<a href="#" onclick="showCat(this.innerText)"></a>
+			<a href="#" onclick="showCat(this.innerText)"></a>
+			<a href="#" onclick="showCat(this.innerText)"></a>  
 		 </ul>
 		 </div>
 		</li>	
