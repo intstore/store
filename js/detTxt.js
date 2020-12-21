@@ -1,7 +1,7 @@
 var fName = "cat";
 var fName0 = "d";
 var fName1 = "h";
-var langSum = 3;    
+var langSum = 2;    
 var pageLen = 5;  
 var showNums = 6; 
 var matchRes = 2; 
@@ -275,11 +275,11 @@ var text1={
 	mKey4th:"อุปกรณ์การเรียน",
 	mKey5th:"กล่องบรรจุ",
 
-	mKey1vi:"",
+/* 	mKey1vi:"",
 	mKey2vi:"",
 	mKey3vi:"",
 	mKey4vi:"",
-	mKey5vi:"",
+	mKey5vi:"", */
 };	
 
 var defss = {
