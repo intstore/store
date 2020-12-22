@@ -120,7 +120,7 @@ function cMess(val, m){
 	document.execCommand("copy"); 
 	document.body.removeChild(cTArea);
 	if(m == null){
-		fadeOut(val+"已复制");
+		fadeOut(val+" คัดลอกเสร็จสมบูรณ์");
 	}else{
 		fadeOut(m);
 	}
