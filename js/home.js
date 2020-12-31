@@ -58,7 +58,7 @@ window.onscroll = function() {
 }
  
 /*search text*/
-var catNums = (Object.keys(text1).length)/3; 
+var catNums = (Object.keys(text1).length)/langSum; 
 function catLan(){
 	var aaa = "";
 	for(var i = 0; i < catNums; i++){
@@ -75,18 +75,20 @@ function showCat(cVal){
 }
 /**/
 
-var hOut = hdiv = curName = "";
+var hOut = hdiv = cName = "";
 var sList = 1;
 function wHome(){
+	var dLen = 1;
 	var resH = ""; 
-	hOut = curName = "";
+	hOut = cName = "";
 	By("hCat").innerHTML = "";
 	for(var i=0; i<dtp.length; i++){
+		dLen = Object.keys(dtp[i]).length;
 		hOut = "<div class='pd home'><div class='pd_title'><p class='TL'>"+text1["mKey"+(i+1)+lang]+"</p></div> <div class='ser_group'>";
-		if(Object.keys(dtp[i]).length > 6){sList = 6;}else{sList = Object.keys(dtp[i]).length;}
-		for(var j=sList; j>=1; j--){
-			curName = (i+1)+"_"+j;   
-			hdiv += "<div class='ser_box'><a class='full' href='file/"+fName+(i+1)+"_"+j+".html'></a><div class='img'><img src='picture/view/"+fName+(i+1)+"_"+j+"-1.jpg' alt='"+dtp[i][curName][0][lang]+"'/><span>"+dtp[i][curName][0][lang]+"</span><div class='box_layer'></div></div><p>"+dtp[i][curName][0][lang]+"</p></div>";
+		if(dLen > 6){sList = 6;}else{sList = dLen;}
+		for(var j=0; j<sList; j++){
+			cName = (i+1)+"_"+(dLen-j); 		
+			hdiv += "<div class='ser_box'><a class='full' href='file/"+fName+cName+".html'></a><div class='img'><img src='picture/view/"+fName+cName+"-1.jpg' alt='"+dtp[i][cName][0][lang]+"'/><span>"+dtp[i][cName][0][lang]+"</span><div class='box_layer'></div></div><p>"+dtp[i][cName][0][lang]+"</p></div>";
 		}
 		resH += hOut+hdiv+"</div></div>"+"<div class='moreC' onclick='showCat("+(i)+")'><span>More</span></div>";
 		hdiv = "";
