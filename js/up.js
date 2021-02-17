@@ -277,29 +277,30 @@ function gotopage(newPage_num) {
 var pVal0 = pVal1 = 0;
 var sty0 = "<span class='list0 list2'>";
 function setpage() {   // 初始化or重繪 頁面列表
-	pVal0 = parseInt((curPage-1)/pageLen);
-	pVal1 = parseInt(amountPage/pageLen);
+	pVal0 = parseInt((curPage-1)/pageLen);  //計算 當前所在頁 在第幾頁 分頁
+	pVal1 = parseInt(amountPage/pageLen); // 分頁數量
+	if(amountPage%pageLen == 0){pVal1 = pVal1-1;}
+	//console.log(curPage+" :: "+pVal0+" - "+pVal1);
 	var p11 = 1;
 	var p2 = amountPage;
-	if(amountPage>pageLen){
+	if(amountPage > pageLen){
 		if(pVal0 == 0) { 
 			p2 = pageLen;
-			btn0 += "<a class='isBtn1' onclick='gotopage("+(p2+1)+")'> Next </a>"; 
-		}else if(pVal0 == pVal1){
-			p11 = pVal1*pageLen+1;
-			p2 = amountPage;
-			btn0 += "<a class='isBtn0' onclick='gotopage("+(pVal0*pageLen)+")'>Prev</a>";
-		}else{
+			btn0 = "<a class='isBtn1' onclick='gotopage("+(p2+1)+")'>Next</a>"; 
+		}else if(pVal0 < pVal1){
 			p11 = pVal0*pageLen+1;
 			p2 = pVal0*pageLen+pageLen;
-			btn0 += "<a class='isBtn0' onclick='gotopage("+(pVal0*pageLen)+")'>Prev</a>"; 
-			btn0 += "<a class='isBtn1' onclick='gotopage("+(p2+1)+")'> Next </a>"; 
+			btn0 = "<a class='isBtn0' onclick='gotopage("+(pVal0*pageLen)+")'>Prev</a>"; 
+			btn0 += "<a class='isBtn1' onclick='gotopage("+(p2+1)+")'>Next</a>"; 
+		}else{
+			p11 = pVal1*pageLen+1;
+			btn0 = "<a class='isBtn0' onclick='gotopage("+(pVal0*pageLen)+")'>Prev</a>";
 		}
 	}
 	for(pl=p11; pl<=p2; pl++) {
 		if(pl!=curPage){
 			if(pl <= amountPage){
-				aaa = "<a class='list0' onclick='gotopage("+pl+")'>"+pl+"</a>";
+				aaa = "<a class='list0' href='"+top0+fName+arr[pl-1]+".html'>"+pl+"</a>";
 			}else{
 				aaa = "<a class='list1'>"+pl+"</a>";
 			}
